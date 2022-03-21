@@ -7,11 +7,18 @@ Bundle-Version: 1.0.1.qualifier
 Bundle-Release-Date: 20220321
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Bundle-ActivationPolicy: lazy
-Bundle-ClassPath: .
+Bundle-ClassPath: .,
+ lib/annotations-13.0.jar
+ lib/kotlin-stdlib-common-1.6.10.jar
+ lib/okio-2.8.0.jar
+ lib/lib/okhttp-4.9.3.jar
+ lib/kotlin-stdlib-1.6.10.jar
 Require-Bundle: org.jkiss.dbeaver.model;visibility:=reexport,
     org.jkiss.dbeaver.model.sql,
     org.jkiss.dbeaver.registry;visibility:=reexport,
     org.jkiss.bundle.apache.dbcp,
     io.cloudbeaver.model
-Export-Package: io.cloudbeaver.service.security
+Export-Package: io.cloudbeaver.service.security,
+ io.cloudbeaver.service.security.external.remote.model.role,
+ io.cloudbeaver.service.security.external.remote.model.session
 Automatic-Module-Name: io.cloudbeaver.service.security
