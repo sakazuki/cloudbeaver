@@ -6,7 +6,7 @@ RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - && \
     echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
     apt-get update && \
     apt-get install -y nodejs yarn && \
-    yarn add lerna
+    yarn global add lerna
 RUN ./build.sh
 
 FROM eclipse-temurin:11.0.14.1_1-jre-focal
