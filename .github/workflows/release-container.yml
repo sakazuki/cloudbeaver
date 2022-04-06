@@ -28,11 +28,6 @@
           tags: |
             type=raw,value=legacy
 
-      - name: build
-        run: |
-          cd ./deploy
-          ./build.sh
-
       - name: Login to DockerHub
         if: github.event_name != 'pull_request'
         uses: docker/login-action@v1
