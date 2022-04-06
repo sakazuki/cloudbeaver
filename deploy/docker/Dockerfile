@@ -1,7 +1,11 @@
 FROM maven:3.8.4-openjdk-17 as builder
-COPY ../.. /src/
 WORKDIR /src/deploy
-RUN ./build.sh
+COPY ../.. /src/
+RUN <<EOF
+  pwd
+  ls
+  ./build.sh
+EOF
 
 FROM eclipse-temurin:11.0.14.1_1-jre-focal
 #adoptopenjdk/openjdk11:jdk-11.0.12_7-ubuntu-slim
