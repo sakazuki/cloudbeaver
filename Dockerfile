@@ -12,7 +12,7 @@ RUN ./build.sh
 FROM eclipse-temurin:11.0.14.1_1-jre-focal
 #adoptopenjdk/openjdk11:jdk-11.0.12_7-ubuntu-slim
 
-COPY --from=builder /src/deploy/cloudbeaver /opt/cloudbeaver
+COPY --from=builder /src/cloudbeaver/deploy/cloudbeaver /opt/cloudbeaver
 
 EXPOSE 8978
 
