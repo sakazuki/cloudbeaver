@@ -1,5 +1,5 @@
 FROM maven:3.8.4-openjdk-17 as builder
-COPY ../../.. /src/
+COPY ../.. /src/
 WORKDIR /src/deploy
 RUN ./build.sh
 
