@@ -1,4 +1,4 @@
-FROM maven:3.8.4-openjdk-17 as builder
+FROM maven:3.8.5-openjdk-11 as builder
 COPY . /src/cloudbeaver
 WORKDIR /src/cloudbeaver/deploy
 RUN ./build.sh
