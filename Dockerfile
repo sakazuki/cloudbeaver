@@ -1,6 +1,6 @@
 FROM maven:3.8.4-openjdk-17 as builder
-COPY . /src/
-WORKDIR /src/deploy
+COPY . /src/cloudbeaver
+WORKDIR /src/cloudbeaver/deploy
 RUN ./build.sh
 
 FROM eclipse-temurin:11.0.14.1_1-jre-focal
